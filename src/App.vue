@@ -1,29 +1,34 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
-  </div>
+  <v-app>
+    <v-row
+      align="center"
+      justify="space-around"
+    >
+      <v-btn>Normal</v-btn>
+      <v-btn color="primary">
+        Primary
+      </v-btn>
+      <v-btn color="error">
+        Error
+      </v-btn>
+      <v-btn disabled>
+        Disabled
+      </v-btn>
+    </v-row>
+  </v-app>
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator';
-import HelloWorld from './components/HelloWorld.vue';
+import Vue from 'vue';
 
-@Component({
+export default Vue.extend({
+  name: 'App',
+
   components: {
-    HelloWorld,
   },
-})
-export default class App extends Vue {}
-</script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
+  data: () => ({
+    //
+  }),
+});
+</script>
