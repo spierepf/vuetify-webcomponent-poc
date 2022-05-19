@@ -20,10 +20,11 @@
 
 <script lang="ts">
 import Vue from 'vue';
+import vuetify from './plugins/vuetify';
 
 export default Vue.extend({
   name: 'App',
-
+  vuetify,
   components: {
   },
 
